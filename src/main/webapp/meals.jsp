@@ -34,12 +34,12 @@
         <tbody style="margin: 3%">
         <c:forEach var="meal" items="${meals}">
             <c:set var="color" value="green"/>
-            <tr style="color:${meal.excess ? 'greenyellow' : 'red'}">
+            <tr style="color:${meal.excess ? 'green' : 'red'}">
                 <td>${meal.dateTime}</td>
                 <td>${meal.description}</td>
                 <td>${meal.calories}</td>
-                <td>updating</td>
-                <td>deleting</td>
+                <td><a href="meals?action=create&id=${meal.id}">updating</a></td>
+                <td><a href="meals?action=delete&id=${meal.id}">deleting</a></td>
             </tr>
         </c:forEach>
         </tbody>

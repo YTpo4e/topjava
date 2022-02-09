@@ -8,7 +8,9 @@ import java.util.UUID;
 public interface MealDao {
     List<Meal> getAll();
 
-    MealDao getById(UUID id);
+    Meal getById(UUID id);
 
     Meal save(Meal meal);
+
+    Meal deleteById(UUID id);
 }
